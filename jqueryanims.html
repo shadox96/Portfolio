@@ -1,0 +1,99 @@
+<html>
+
+  <head>
+    <title>
+      Lab : JQuery Animation
+    </title>
+
+<style>
+/* This Style tag creates the orange box that appears on the page */
+#divv{
+    width: 200px;
+height: 200px;
+position: relative; /* Box would not move with out being absolute or relative*/
+
+background-color: #FA6900;
+border-radius: 5px;
+text-align: center;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="../../theme.css">
+<link rel="icon" type="image/png" href="../../Images/fav2.png">
+<!-- This script tag links the JQuery libraries so that they may be used. -->
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+    <body>
+
+<center>
+    <br>
+    <h1>
+            Lab : JQuery Animation
+    </h1>
+    <h3> date </h3>
+    <hr>
+    <br>
+
+<table width="65%">
+<tr>
+<td align="center">
+<p> Here, I will use JQuery to manipulate the CSS and make an animation to the box. Click the button to try it!</p>
+</td>
+</tr>
+</table>
+
+<div id="divv"></div>
+
+<p>Click the Buttons!</p>
+
+<hr>
+<br>
+ <button class="button" id = "kite" onclick="move()">Move it!</button> <!-- This button moves the box -->
+ <button  class="button" id = "invis" onclick="opa()">Change Opacity!</button> <!-- This button changes the opacity of the box -->
+   <button class="button"  id = "shapeshift" onclick="cir()">Into a Circle!</button> <!-- This button changes the box into a circle -->
+    <button class="button" id = "transfig" onclick="siz()">Change the Size!</button> <!-- This button changes the size of the box -->
+
+    <button width="60%" class="button" id = "yogg" onclick="craz()">Lets Get CRAZY!!!</button> <!-- This button will change the dimensions of the box -->
+                <br>
+                <br>
+<br>
+
+</center>
+<script type = "text/javascript">
+$(document.getElementById('kite')).click(function(){ /* Function to move the box */
+ var div = $("div");
+ div.animate({left: '400px'}, "slow");
+ div.animate({left: '0px'}, "slow");
+ div.animate({left: '-400px'}, "slow");
+ div.animate({left: '0px'}, "slow");
+});
+    $(document.getElementById('invis')).click(function(){ /* Function to change opacity */
+ var div = $("div");
+ div.animate({opacity: '0.2'});
+ div.animate({opacity: '0.6'});
+ div.animate({opacity: '1.4'});
+ div.animate({opacity: '1.0'});
+});
+$(document.getElementById('transfig')).click(function(){ /* Function to change size */
+       $("div").animate({
+           height: '100px',
+           width: '100px'
+       });
+   });
+     $(document.getElementById('shapeshift')).click(function () { /* Function to change shape */
+       $("div").animate({
+           borderRadius: '50%',
+       });
+});
+     $(document.getElementById('yogg')).click(function(){ /*"Go Crazy" function */
+       $("div").animate({
+           height: '300px',
+           width: '230px',
+
+       });
+        div.animate({up:'200px'}, "fast");
+        div.animate({up:'0px'}, "fast");
+   });
+</script>
+</body>
+</html>

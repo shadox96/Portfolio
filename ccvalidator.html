@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Credit Card Validator</title>
+</head>
+<style type="text/css"> /*just to make it look nice*/
+  button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  button:hover {
+      background-color: #555555;
+      color: white;
+  }
+</style>
+<body style="background-color: green; text-align: center; font-family: Ariel, Helvetica, sans-serif;">
+<h1>Validate Card Number</h1>
+<form action="#"> <!--Form to put card # into-->
+  <label for="card" style="font-size: 20px;"><b>Card: </b></label>
+  <input type="numbers" id="card" size="20"/>
+    <span id="card_error" style="color:black;"></span>
+    <br>
+    <br>
+    <i><b>Type in all numbers without dashes or spaces</b></i>
+    <br>
+    <br>
+  <button type="button" onClick="cardChecker();">Check your Card</button>
+</form>
+<script type="text/javascript">
+    var mindigits=/^(?:\D*\d){15,16}\D*$/;//Checks for minimum of 15 and max of 16 digits
+    var anum=/(^\d+$)|(^\d+\.\d+$)/;//Checks for all numbers and no letters
+    var anum2=/(\d)((?!\1)\d)((?!\1)\d)((?!\1)\d)((?!\1)\d)((?!\1)\d)((?!\1)\d)((?!\1)\d)+/;//Different digits
+    var anum3=/^(\s*\d*[02468]\s*,)*(\s*\d*[02468]\s*)$/;//Checks for last digit even number
+    var anum4=/^(?!.*0{5}.*)([1-9][0-9]{14,16})$/;//Limit consecutive zeroes to five
+    var anum5=/^(?!.*1{5}.*)([1-9][0-9]{14,16})$/;//Limit consecutive ones to five
+  function cardChecker(){
+  card = document.getElementById("card").value;
+  card_error = "";
+  if (!card.match(anum,anum2,anum3,anum4,anum5))
+    card_error = "Invalid card #, please try again.";
+  else {
+  alert ("Do you always believe everything you see on the Internet? You could have given your credit card to some scammer just now! But anyways, your card is definitely real.")
+  }
+  document.getElementById("card_error").innerHTML = card_error;
+  }
+</script>
+</body>
+</html>

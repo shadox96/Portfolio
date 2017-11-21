@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body
+{
+	background-color: #416B90;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#header
+{
+	background-color:darkgreen;
+}
+#header
+{
+	text-align: center;
+}
+
+#content p
+{
+ font-size: 16px;
+}
+
+#links
+{
+	float:right;
+	margin: 5px;
+	background-color: #539462;
+}
+
+#headlinks a:link{
+	display:inline;
+	margin: 10px;
+	text-decoration: none;
+	color: black;
+
+}
+
+#headlinks a:visited{
+	color:brown;
+}
+
+#headlinks a:hover{
+	background-color:white;
+}
+/* CSS Document */

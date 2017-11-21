@@ -1,0 +1,60 @@
+<!--Before the code and text begins, I would like to start with some background here. I had lost track in class around the time we got to JQuery. Along-side doing this project, I was also doing some self-review, and had managed to catch myself up pretty nicely. But that explains why I haven't been turning assignments in. Now, on with the code! -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portfolio</title>
+<link rel="stylesheet" href ="portfolio.css">
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>What I Know, and How to Contact Me </h1>
+		<h4>Jason Steinhart</h4>
+		<div id = "headlinks">
+			<a href = "index.html">Home Page </a>
+			<a href = "background.html">My Background </a>
+			<a href = "goals.html">My Goals </a>
+		</div>
+	</div>
+
+	<div id="links">
+	<a href = "cashregister.html"><img border = "0" alt = "cash register project" src = "Photos/ShoppingCart.png" width = "150" height = "150"><p>Cash Register</p></a>
+
+	<a href = "fortune.html"><img border = "0"  alt = "fortune teller" src = "Photos/Fortune.png" width = "150" height = "150"><p>Fortune Teller</p></a>
+
+	<a href = "ccvalidator.html"><img border = "0" alt = "Credit Card Validator project" src = "Photos/CCValidator.png" width = "150" height = "150"><p>Credit Card Validator</p></a>
+
+	<a href = "jqueryanims.html"><img border = "0" alt = "JQuery Animation project project" src = "Photos/JQueryAnim.png" width = "150" height = "150"><p>JQuery Animations</p></a>
+	</div>
+
+	<div id = "content">
+
+		<h3> What I Know (so far)</h3>
+		<ul>
+			<li>Some C++</li>
+			<li>Some JavaScript/JQuery</li>
+			<li>HTML/CSS</li>
+			<li>Some Ruby on Rails</li>
+		</ul>
+
+
+		<h3>Contact Me!</h3>
+		<ul>
+			<li>Name: Jason Steinhart</li>
+			<li>Main Phone#: (516)476-2581</li>
+			<li>Email: shadox96@gmail.com</li>
+			<li>Reachable Hours: Usually between 9:30 AM - 10:00 PM.</li>
+	</div>
+
+	<form name="infoform">
+	Your Name: <input type = "text" name="yourname"><br />
+	Your Phone #: <input type = "text" name="yourphone"><br />
+	 Your Email: <input type= "text" name="youremail"><br />
+	 <input type = "button" value= "Enter" onClick="alert('Thank you for contacting me, ' + document.infoform.yourname.value + '. I will either call you at ' + document.infoform.yourphone.value + ', or send you an email at ' + document.infoform.youremail.value)">
+</form>
+
+</div>
+</body>
+</html>

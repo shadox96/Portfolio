@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Cash Register</title>
+  <script>
+  // cartForParty is the object we use to read out of, giving us price values for each of these items.
+  var cartForParty = {
+  banana: 1.25,
+  handkerchief: .99,
+  Tshirt: 25.01,
+  apple: 0.60,
+  nalgene: 10.34,
+  proteinShake: 22.36
+  };
+
+// cashRegister is the function we use, this function adds all of the values together in order to return the total of the order.
+  function cashRegister(cartForParty)
+  {
+  var total = cartForParty.banana + cartForParty.handkerchief + cartForParty.Tshirt + cartForParty.apple + cartForParty.nalgene + cartForParty.proteinShake;
+  return total;
+  }
+
+
+
+  </script>
+</head>
+<body>
+<h1>Welcome to my Store!</h1>
+<p>Bananas are $1.25</p>
+<p>Handkerchiefs are $0.99</p>
+<p>TShirts are $25.01</p>
+<p>Apples are $0.60</p>
+<p>Nalgene is $10.34</p>
+<p>Protein Shakes are $22.36</p>
+<p>So, you have one of each in your cart. Alright. Click the button to see your total!</p>
+<!-- this button will run the cashRegister function, and send an alert to the browser displaying your total for the cart. -->
+<button type = "button" class = "button" onclick ="alert('Your total is $' + cashRegister(cartForParty))"> Find your total!</button>
+
+
+
+
+</body>
+</html>

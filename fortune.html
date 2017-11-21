@@ -1,0 +1,37 @@
+<html>
+<head>
+  <!-- Head is the tag for metadata -->
+<title>Fortune?</title>
+<script>
+ // this function gives values for the input form to receive
+function myFortune()
+//create a function for button
+{
+  var form = document.forms['fortuneform'];
+  var name = form.elements['name'].value; // name value
+  var occ = form.elements['occ'].value; // job value, or occupation as some would say
+  var res = form.elements['res'].value;// residence value
+  var surprise = form.elements['oops'].value; // There's a reason I called it "surprise".... This takes in the number, but the user doesn't know that it's how many kids they'll have!
+
+  var fortune = "So, " + name + ", you're gonna be a(n) " + occ + " in " + res + " with " + surprise + " kids. Oh, did I forget to tell you what the number meant?";
+  // var fortune ties everything into a sentence
+  alert(fortune);
+// give the alert to the browser with the value of var fortune
+
+  console.log(fortune);
+  //log value of fortune to the console.
+}
+</script>
+</head>
+<body bgcolor="lightblue">
+  <h1><center>Fortune telling!</center></h1>
+  <p><center>I'm sure you want to know your fortune, but first, I need some information from you.</center></p>
+  <form name = 'fortune' id = 'fortuneform'> <!-- form for user entry -->
+    <p> What's your name? <input type = 'text' name = 'name' id = 'name' /> </p> <!--Name input-->
+    <p> What's your dream job? <input type = 'text' name = 'work' id = 'occ' /> </p><!--occupation input-->
+    <p> Where do you want to live? <input type = 'text' name = 'place' id = 'res' /> </p><!--residence input-->
+    <p> Give me a number, any number: <input type = 'text' name = 'kids' id = 'oops' /> </p><!--kids input-->
+    <input type = 'button' name ='submit' value = 'Find your fortune!' onclick = 'myFortune();' />
+  </form>
+</body>
+</html
